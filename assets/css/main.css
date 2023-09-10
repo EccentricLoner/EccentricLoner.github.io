@@ -38,12 +38,12 @@ ol, ul {
 }
 
 blockquote, q {
-	quotes: none;
+	quotes: auto;
 }
 
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
-		content: none;
+		content: auto;
 	}
 
 table {
@@ -181,9 +181,9 @@ input, select, textarea {
 	}
 
 	strong, b {
-		color: #fff;
-		color: rgba(255, 255, 255, 0.85);
-		font-weight: 600;
+		color: #47d1d6;
+
+		font-weight: 1000;
 	}
 
 /* List */
@@ -613,7 +613,99 @@ input, select, textarea {
 		}
 
 /* Header */
+#header {
+	width: 100%;
+	padding: 1.5em;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	position: relative;
+	z-index: 10002;
+}
 
+	#header > section:first-child {
+		text-align: left;
+		max-width: 36em;
+		padding-right: 2em;
+	}
+
+	#header > section:last-child {
+		text-align: left;
+		max-width: 36em;
+	}
+
+	#header h1 {
+		font-size: 1.1em;
+		margin: 0 0 1em 0;
+	}
+
+	#header h2 {
+		font-size: 2.25em;
+		margin: 0 0 1em 0;
+	}
+
+
+	@media screen and (max-width: 980px) {
+
+		#header {
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+			#footer > section:first-child {
+				width: 100%;
+				padding-right: 0;
+			}
+
+			#footer > section:last-child {
+				text-align: left;
+				margin: 1.5em 0 0 0;
+				width: 100%;
+			}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#footer {
+			text-align: center;
+			padding: 3em;
+		}
+
+			#footer > section:first-child {
+				text-align: center;
+				max-width: 100%;
+			}
+
+			#footer > section:last-child {
+				text-align: center;
+				max-width: 100%;
+			}
+
+			#footer .copyright li {
+				display: block;
+				margin: 0.75em 0 0 0;
+				padding-left: 0;
+				border-left: 0;
+			}
+
+				#footer .copyright li:first-child {
+					margin-top: 0;
+				}
+
+	}
+
+
+
+
+/* Footer */
 	#footer {
 		width: 100%;
 		padding: 1.5em;
